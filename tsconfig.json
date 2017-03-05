@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "removeComments": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "pretty": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

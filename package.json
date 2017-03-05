@@ -1,0 +1,47 @@
+{
+  "name": "koa2-ts-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for typescript with koa2 and native async/await",
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "clean": "rimraf build",
+    "build": "tsc && copyfiles -u 1 src/**/*.json build",
+    "test": "mocha build/test",
+    "start": "node build/index.js | bunyan -o short",
+    "all": "npm run lint && npm run clean && npm run build && npm run test && npm run start"
+  },
+  "author": "Chris McCall <chris@chrismccall.net> (chrismccall.net)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmccall/koa2-ts-boilerplate.git"
+  },
+  "dependencies": {
+    "@types/bunyan": "0.0.35",
+    "@types/koa": "^2.0.38",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/lodash": "^4.14.54",
+    "@types/node": "^7.0.5",
+    "bunyan": "^1.8.8",
+    "koa": "^2.0.1",
+    "koa-bodyparser": "^4.1.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/mocha": "^2.2.39",
+    "@types/sinon": "^1.16.35",
+    "bunyan": "^1.8.8",
+    "chai": "^3.5.0",
+    "copyfiles": "^1.2.0",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.6.1",
+    "sinon": "^1.17.7",
+    "tslint": "^4.5.1",
+    "typescript": "^2.2.1"
+  }
+}
